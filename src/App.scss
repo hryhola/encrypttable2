@@ -1,0 +1,39 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5em;
+
+  .input {
+    display: flex;
+    width: 100vw;
+    text-align: center;
+    margin: 0.5em 0;
+    span {
+      margin-right: 1vw;
+      width: 48vw;
+      text-align: right;
+    }
+    input {
+      margin-left: 2vw;
+      width: 48vw;
+      font-size: 1em;
+      background-color: #1a1a1a;
+      border: none;
+      color: white;
+    }
+  }
+
+  table {
+    display: flex;
+    flex-direction: column;
+    td {
+      border: 1px solid darkgray;
+      width: 40px;
+    }
+  }
+}

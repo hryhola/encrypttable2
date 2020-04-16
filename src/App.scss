@@ -7,7 +7,9 @@
   justify-content: center;
   color: white;
   font-size: 2.5em;
-
+  i {
+    font-size: 0.5em;
+  }
   .input {
     display: flex;
     width: 100vw;
@@ -34,6 +36,16 @@
     td {
       border: 1px solid darkgray;
       width: 40px;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    * {
+      font-size: 0.9em;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    * {
+      font-size: 0.6em;
     }
   }
 }

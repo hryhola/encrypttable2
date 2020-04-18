@@ -49,16 +49,21 @@ function App() {
   const [keyWord, setKeyWord] = useState('');
   const [sourceText, setSourceText] = useState('');
 
+  const isValidString = (s) =>
+    s.split('').some((e) => originalAlphabetArray.includes(e));
+
   const handleKeyWordInput = ({ target: { value } }) => {
-    if (isValidString(value)) setKeyWord(withUniceChars(value));
+    if (isValidString(value.toLowerCase()))
+      setKeyWord(withUniceChars(value.toLowerCase()));
   };
 
   const handleDecryptInput = ({ target: { value } }) => {
-    setSourceText(value);
+    if (isValidString(value.toLowerCase())) setSourceText(value.toLowerCase());
   };
 
   const handleEncryptInput = ({ target: { value } }) => {
-    setSourceText(decryptString(value));
+    if (isValidString(value.toLowerCase()))
+      setSourceText(decryptString(value.toLowerCase()));
   };
 
   const enctyptChar = (c) => {
@@ -114,9 +119,6 @@ function App() {
       .split('')
       .map((c) => dectyptChar(c))
       .join('');
-
-  const isValidString = (s) =>
-    s.split('').some((e) => originalAlphabetArray.includes(e));
 
   useEffect(() => {
     setKeyGrid(keyWordToGrid(keyWord));

@@ -1,6 +1,6 @@
 {
-  "homepage": "https://vladgrygola.github.io/encryptcaesar",
-  "name": "encryptcaesar",
+  "homepage": "https://vladgrygola.github.io/encrypttable2",
+  "name": "encrypttable2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
